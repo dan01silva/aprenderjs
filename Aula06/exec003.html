@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    body{
+        background-color: silver;
+        color: whitesmoke;
+        font: bold 20pt Arial;
+        
+    }
+    h1{
+        color: black;
+    }
+    p{
+        font-size: larger;
+    }
+</style>
+<body>
+    <h1>Olá Mundo</h1>
+    <p>Já me livrei da maldição</p>
+    <p>Paragrafo de teste</p>
+
+</body>
+<script>
+
+var n1 = Number(window.prompt('Digite Um número:')); 
+var n2 = Number(window.prompt('Digite Outro número:'));
+var s = n1 + n2; // sempre fazera a conversão para a soma dos números
+document.write('Olá   seja bem vindo!');
+
+var nome = 'Daniel'
+var idade = 12.1
+
+idade.toString()
+nome.toLowerCase()
+
+opa = idade + nome
+
+idadeComCasa = idade
+idadeComCasa
+
+//document.write(`0 ${nome} aluno de ${idade} anos`);
+
+document.writeln(`coloquei tudo com crase, só para dizer que ${nome.length} e o nome maiúsculo é ${nome.toUpperCase()} <br>`)
+document.writeln(`to fixed, para controlar exeibição: ${idade} e colocar ${idadeComCasa.toFixed(2)}<br>`)
+document.writeln(`e agora TolocaleString para: bf${idade.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+
+</script>
+</html>
