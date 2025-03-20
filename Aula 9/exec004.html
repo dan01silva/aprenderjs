@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    body{
+        background-color: rgb(86, 86, 167);
+        color: whitesmoke;
+        font: bold 20pt Arial;
+        
+    }
+    
+</style>
+<body>
+    <h1>Iniciandos Estudos em DOM</h1>
+    <p>Esse é o resultado p 01</p>
+    <p>Paragrafo de teste p 02</p>
+
+    <div class="msg">Clica em mim</div>
+</body>
+<script>
+    var corpo = window.document.body
+    var p1 = window.document.getElementsByTagName('p')[0]
+
+    var d = window.document.querySelector('div.msg')
+    d.style.background = 'black'
+
+</script>
+</html>
