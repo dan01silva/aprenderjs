@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Dom</title>
+    <style>
+        div#div1{
+            color:lightslategray;
+            background-color: darkkhaki;
+            width: 300px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+            font-size: 25px;
+            font-style: italic ;
+        }
+    
+    </style>
+</head>
+
+
+<body>
+    <div id="div1">Interagir</div>
+</body>
+<script>
+    var a = window.document.getElementById('div1')
+    // fazendo as interações através do addEventListener:
+    a.addEventListener('click',clicar)
+    a.addEventListener('mouseenter',mouseentra)
+    a.addEventListener('mouseout',mousesai)
+
+
+
+    function clicar() {
+        var a = window.document.getElementById('div1')
+        a.innerHTML = "ei ei ei, vc cliclou!"
+        a.style.color = 'red'
+        //window.alert("vc interagiu e é gay")
+    }
+
+    function mouseentra(){
+        //a.style.color = 'lightslategray'
+        a.innerText= "Entrou, Là ele!"
+    }
+
+    function mousesai(){
+        a.style.color = 'lightslategray'
+        a.innerText = "Saiu, Là ele!"
+    }
+
+</script>
+
+</html>
