@@ -1,6 +1,6 @@
 body{
 
-    background-color: #AF6E4D;
+    background-color: black;
 
 }
 
@@ -39,6 +39,8 @@ footer{
 }
 button{
     
-    border-radius: 10px;
+    border-radius: 7px;
     color: #AF6E4D;
+    border-color: black;
+    
 }
