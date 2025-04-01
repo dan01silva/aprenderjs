@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Modelo de Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Título</h1>
+  </header>
+
+  <section>
+    <div id="dados"><p>Inicio: <Input type='number' name="inicio" id="inicio"></Input></p>
+      <p>intervalo: <Input type='number' name="intervalo" id="intervalo"></Input></p>
+      <p>Fim: <Input type='number' name="fim" id="fim"></Input></p>
+    </div>
+    <button type="submit" onclick="contar()">Contar</button>    
+    <div id="res">
+      Preparando a contagem...
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; Daniel matos</p>
+  </footer>
+
+  <script src="contador.js"></script>
+</body>
+</html>
