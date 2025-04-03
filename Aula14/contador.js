@@ -1,20 +1,37 @@
 function contar() {
 
-    let inicio = parseInt(document.getElementById('inicio').value)
-    let intervalo = parseInt(document.getElementById('intervalo').value)
-    let fim = parseInt(document.getElementById('fim').value)
-
-
+    let inicio = Number(document.getElementById('inicio').value)
+    let intervalo = Number(document.getElementById('intervalo').value)
+    let fim = Number(document.getElementById('fim').value)
+    let res = document.getElementById('res')
     
-    if (fim < inicio) {
-        window.alert('Fim não pode ser menor que o inicio')
-    } else if (inicio.length == 0 || intervalo.length == 0 || fim.length == 0 ) {
-        window.alert('Valores Inválidos, confira os campos e tente novamente')
+
+    res.innerHTML = 'DADOS INVÁLIDOS: Início e fim não podem ser iguais.'
+    if (inicio == 0 || intervalo == 0|| fim == 0) {
+        console.log('dados invalidos')
+        res.innerHTML = 'DADOS INVÁLIDOS, preencha e tente novamente'
+
+
     } else {
-        for (inicio; inicio < fim; inicio += intervalo) {
-            console.log(inicio)
-            '➡️'
+        if (inicio < fim) {
+            console.log('inicio MENOR fim')
+            res.innerHTML = ''
+            for (inicio; inicio <= fim; inicio += intervalo) {
+
+                res.innerHTML += `${inicio} \u{1F603}`
+
+            }
+            res.innerHTML += `\u{1F3C1}`
+        } else if (inicio > fim) {
+            res.innerHTML = ''
+            console.log('inicio MAIOR fim')
+            for (inicio; inicio >= fim; inicio -= intervalo) {
+
+                res.innerHTML += `${inicio} \u{1F603}`
+
+            }
+            res.innerHTML += `\u{1F3C1}`
         }
-        console.log(fim)
     }
+
 }
