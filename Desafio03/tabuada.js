@@ -1,16 +1,27 @@
 function getTabuada() {
-    let num = Number(window.document.getElementById('numero').value)
     let res = window.document.getElementById('res')
-    let tab = window.document.getElementById('tab')
+    let numeroInput = window.document.getElementById('numero').value
 
-    res.innerHTML = 'Tente novamente'
+    if (numeroInput == '') {
+        res.innerHTML = 'Digite um número para gerar a tabuada'
+    } else {
+        let num = Number(numeroInput)
+        // Limpar tabuada anterior
+        res.innerHTML = `<strong>Tabuada do ${num}:</strong><br>`
 
-    res.innerHTML = `Tabueida do <strong>${num}</>: <br>`
-    for (var i = 0; i <= 10; i++) {
-        x = num * i
+        // Cria o select dinamicamente
+        let select = document.createElement('select')
+        select.name = 'tab'
+        select.id = 'tab'
+        select.size = 11
 
-        res.innerHTML += `${num} x ${i}: ${x} <br>`
+        for (var i = 0; i <= 10; i++) {
+            let x = num * i
+            let option = document.createElement('option')
+            option.text = `${num} x ${i} = ${x}`
+            select.appendChild(option)
+
+        }
+        res.appendChild(select)
     }
-
-
 }
